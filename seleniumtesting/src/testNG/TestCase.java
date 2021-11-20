@@ -14,34 +14,26 @@ public class TestCase {
 	@BeforeSuite
 	public void launch() {
 		long start=System.currentTimeMillis();
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\seleniumtesting\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\git\\repository\\seleniumtesting\\Driver\\chromedriver.exe");
 		driver=new ChromeDriver();}
 
 
 
-	@Test(priority = 2)
+	@Test
 	public void openGoogle() {
 
-		driver.get("https://www.amazon.in/");
-
-
-
-	}
-	@Test(priority = 3)
+		driver.get("https://www.google.com/");
+        }
+	@Test(priority = -3)
 	public void faceook(){
 
 		driver.get("https://www.facebook.com/");
-
-
-	}
-	@Test(priority = 1)
+}
+	@Test(priority = 3)
 	public void inst() {
 
 		driver.get("https://www.instagram.com/");
-
-
-
-	}
+}
 	@AfterSuite
 	public void closebrowser() {
 		driver.close();

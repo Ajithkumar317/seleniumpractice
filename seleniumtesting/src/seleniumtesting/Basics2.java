@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Basics2 {
 
 	public static void main(String[] args) {
-System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\seleniumtesting\\Driver\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\git\\repository\\seleniumtesting\\Driver");
 WebDriver driver=new ChromeDriver();
 
 driver.get("https://www.amazon.in/");

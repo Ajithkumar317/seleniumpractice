@@ -1,9 +1,13 @@
 package automationPractice;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,8 +18,8 @@ import com.sun.java.swing.plaf.windows.resources.windows;
 public class Task1 {
 
 	public static void main(String[] args) throws Throwable  {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\"
-				+ "seleniumtesting\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", 
+				"C:\\Users\\User\\git\\repository\\seleniumtesting\\Driver\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 
 		driver.get("http://automationpractice.com/index.php");
@@ -59,7 +63,13 @@ public class Task1 {
 		WebElement payment = driver.findElement(By.xpath("//*[@class=\"cheque\"]"));
 		payment.click();
 		WebElement confirm = driver.findElement(By.xpath("//body/div[@id='page']/div[2]/div[1]/div[3]/div[1]/form[1]/p[1]/button[1]"));
-		confirm.click(); Thread.sleep(3000);
+		confirm.click();
+		TakesScreenshot screen =(TakesScreenshot) driver;
+		File srfile = screen.getScreenshotAs(OutputType.FILE);
+		File dsfile=new File("C:\\Users\\User\\git\\repository\\seleniumtesting\\Screenshot\\img.png");
+		FileUtils.copyFile(srfile, dsfile);
+		
+		Thread.sleep(3000);
 		driver.close();
 		System.out.println(" Order Placed ");
 

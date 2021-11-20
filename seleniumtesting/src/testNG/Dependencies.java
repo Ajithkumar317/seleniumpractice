@@ -16,7 +16,7 @@ public class Dependencies {
 	@BeforeSuite
 	private void Browserlaunch() {
 		long start=System.currentTimeMillis();
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\seleniumtesting\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\User\\\\git\\\\repository\\\\seleniumtesting\\\\Driver\\\\chromedriver.exe");
 		driver=new ChromeDriver();}
 
 	@Test		

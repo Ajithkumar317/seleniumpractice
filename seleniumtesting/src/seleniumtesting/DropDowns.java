@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 public class DropDowns {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\seleniumtesting\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\git\\repository\\seleniumtesting\\Driver");
 		WebDriver driver=new ChromeDriver();
 
 		driver.get("http://www.leafground.com/pages/Dropdown.html");

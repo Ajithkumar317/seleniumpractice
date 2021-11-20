@@ -15,8 +15,7 @@ import org.openqa.selenium.interactions.Actions;
 public class Robots {
 
 	public static void main(String[] args) throws AWTException {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\"
-				+ "seleniumtesting\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\User\\\\git\\\\repository\\\\seleniumtesting\\\\Driver\\\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 
 		driver.get("https://www.seleniumeasy.com/selenium-tutorials");
